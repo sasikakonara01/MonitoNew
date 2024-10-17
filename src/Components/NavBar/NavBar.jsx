@@ -28,7 +28,7 @@ function NavBar({ bgColor = "transparent" }) {
           <a href="#home" className="hover:text-blue-600">
             Home
           </a>
-          <a href="#category" className="hover:text-blue-600">
+          <a href="/category" className="hover:text-blue-600">
             Category
           </a>
           <a href="#about" className="hover:text-blue-600">

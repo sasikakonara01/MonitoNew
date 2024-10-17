@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { get_pets_data_api } from "../../Services/PetDataApi";
+import { get_pets_data_api } from "../../../Services/PetDataApi";
 
 function useLandingPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [petData, setPetData] = useState([]);
 
   const fetchpetsData = async () => {
+    console.log("called");
     try {
       setIsLoading(true);
       const response = await get_pets_data_api();
@@ -17,12 +18,12 @@ function useLandingPage() {
     }
   };
 
-  // Fetch data on component mount
+  //Fetch data on component mount
   useEffect(() => {
     fetchpetsData();
-  }, []); // Empty dependency array ensures this only runs on mount
+  }, []);
 
-  return { petData, isLoading };
+  return { petData, isLoading, fetchpetsData };
 }
 
 export default useLandingPage;

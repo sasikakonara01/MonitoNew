@@ -9,6 +9,7 @@ import Button from "../Common/ReUsableButton/Button";
 import CompanyLogo from "../../Assets/companyLogo.png";
 import ProductSection from "../../Components/LandingPage/ProductSection/ProductSection";
 import Banner02 from "../Banner/Banner02";
+import NewsSection from "../../Components/LandingPage/NewsSection/newsSection"; // Updated import
 
 const LandingPage = () => {
   return (
@@ -19,7 +20,6 @@ const LandingPage = () => {
         <PetSectionLand />
         <Banner />
         <ProductSection />
-
         {/* Section for Pet Sellers */}
         <div className="px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between md:py-6">
@@ -40,6 +40,7 @@ const LandingPage = () => {
           </div>
         </div>
         <Banner02 />
+        <NewsSection /> {/* Correct usage of NewsSection */}
       </div>
       <Footer />
     </>

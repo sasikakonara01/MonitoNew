@@ -30,7 +30,8 @@ function PetSectionLand() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-cyan-800 w-full">
             {petData?.map((item) => (
               <CardUnit
-                key={item.id} // Using unique ID for keys is best practice
+                key={item.id}
+                Id={item.id} // Using unique ID for keys is best practice
                 Title={item.breed}
                 image={item.image}
                 Gender={item.gender}

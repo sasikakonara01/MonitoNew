@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import Logo from "../../Assets/Frame.png";
+import CurrencyDropDown from "../Common/Input/CurrencyDropDown";
 
 function NavBar({ bgColor = "transparent" }) {
   // bgColor prop with default value
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className={`fixed w-full z-10 p-4 ${bgColor}`}>
+    <nav className={`fixed w-full z-50 p-4 ${bgColor}`}>
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="font-bold text-blue-800">
@@ -25,7 +26,7 @@ function NavBar({ bgColor = "transparent" }) {
 
         {/* Menu Items for Desktop */}
         <div className="hidden md:flex space-x-6 text-lg text-blue-950 font-bold">
-          <a href="#home" className="hover:text-blue-600">
+          <a href="/" className="hover:text-blue-600">
             Home
           </a>
           <a href="/category" className="hover:text-blue-600">
@@ -54,19 +55,14 @@ function NavBar({ bgColor = "transparent" }) {
         </button>
 
         {/* Currency Dropdown for Desktop */}
-        <div className="hidden md:flex items-center text-blue-800">
-          <span className="mr-1">VND</span>
-          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M5.23 7.21a.75.75 0 011.04-.02L10 10.586l3.73-3.364a.75.75 0 011.02 1.1l-4 3.607a.75.75 0 01-1.04 0l-4-3.607a.75.75 0 01-.02-1.02z" />
-          </svg>
-        </div>
+        <CurrencyDropDown />
       </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden flex flex-col items-center space-y-4 mt-4">
           <div className="flex flex-col space-y-2 text-lg text-blue-950 font-bold">
-            <a href="#home" className="hover:text-blue-600">
+            <a href="/" className="hover:text-blue-600">
               Home
             </a>
             <a href="#category" className="hover:text-blue-600">

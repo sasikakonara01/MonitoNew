@@ -1,8 +1,11 @@
 import React from "react";
 
-function CardUnit({ Title, Gender, Age, Price, image }) {
+function CardUnit({ Title, Gender, Age, Price, image, Id }) {
   return (
-    <div className="box shadow-lg rounded-lg overflow-hidden bg-white p-2">
+    <div
+      className="box shadow-lg rounded-lg overflow-hidden bg-white p-2"
+      onClick={() => (window.location.href = `/product/${Id} state=${Id}`)}
+    >
       <div className="image w-full h-48">
         <img
           src={image}

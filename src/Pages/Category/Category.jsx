@@ -1,32 +1,57 @@
 import React from "react";
 import Footer from "../../Components/Footer/Footer";
 import CategoryItems from "./CategoryItems";
+import Button from "../../Components/Common/ReUsableButton/Button";
+import groupdog from "../../Assets/groupdog.png";
 
 const Category = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen ">
       {/* Header Section */}
       <header
-        className="w-full h-[300px] relative bg-cover bg-center"
+        className="w-full h-[400px] md:h-[500px] relative bg-cover bg-center bg-[#FCEED5] rounded-md "
         style={{ backgroundImage: 'url("path-to-header-image.jpg")' }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div className="relative z-10 max-w-7xl mx-auto text-white flex items-center h-full px-4">
-          <div>
-            <h1 className="text-4xl font-bold">
-              One More Friend, Thousands More Fun!
+        {/* Blue shape on the right */}
+        <div className="absolute top-0 right-0 h-full w-full md:w-1/2 bg-[#003459] rounded-3xl hidden md:block"></div>
+
+        {/* Image of dog(s) on the left */}
+        <img
+          className="absolute top-0 left-0 w-full h-full object-cover md:object-contain md:h-full md:w-auto"
+          src={groupdog}
+          alt="Group of dogs"
+        />
+
+        {/* Container for content */}
+        <div className="relative z-10 max-w-7xl mx-auto text-white  flex items-center h-full justify-center md:justify-end px-4">
+          <div className="text-center md:text-right">
+            {/* Heading */}
+            <h1 className="text-3xl md:text-4xl font-bold md:text-white text-[#003459]">
+              One More Friend,
             </h1>
-            <p className="mt-4 text-lg">
-              Having a pet means more joy, a new friend, a happy person who will
-              always be with you to have fun.
+            <h2 className="text-lg md:text-xl font-bold md:text-white text-[#003459]">
+              Thousands More Fun!
+            </h2>
+
+            {/* Description */}
+            <p className="mt-4 text-sm md:text-mdmd:text-white text-[#003459]">
+              Having a pet means more joy,
+              <br /> a new friend, a happy person who will always
+              <br /> be with you to have fun.
             </p>
-            <div className="mt-6">
-              <button className="px-6 py-2 bg-blue-500 rounded-full text-white mr-4">
-                View Intro
-              </button>
-              <button className="px-6 py-2 bg-white rounded-full text-blue-500">
-                Explore Now
-              </button>
+
+            {/* Buttons */}
+            <div className="mt-6 flex flex-col md:flex-row justify-center md:justify-end">
+              <Button
+                variant="light"
+                Title={"View Intro"}
+                icon="true"
+                className="mb-4 md:mb-0 md:mr-4"
+              />
+              <Button
+                className="text-blue-500 border border-blue-500 md:text-white md:border-white py-2 px-4 rounded"
+                Title={"Explore Now"}
+              />
             </div>
           </div>
         </div>
@@ -127,7 +152,6 @@ const Category = () => {
           </div>
         </section>
       </div>
-      <Footer />
     </div>
   );
 };

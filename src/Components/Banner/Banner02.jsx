@@ -4,7 +4,7 @@ import Button from "../Common/ReUsableButton/Button";
 
 const Banner = () => {
   return (
-    <div className="w-full flex rounded-2xl flex-col items-center md:items-end justify-center relative overflow-hidden">
+    <div className="w-full h-[50vh] flex  rounded-2xl flex-col items-center md:items-end justify-center relative overflow-hidden">
       <img
         className="rounded-2xl w-full h-[60vh] md:h-[70vh] object-cover"
         src={banner02}

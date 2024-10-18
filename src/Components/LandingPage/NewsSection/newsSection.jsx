@@ -12,7 +12,7 @@ function NewsSection() {
       <div className="flex items-center justify-between w-full px-5 mt-8 mb-3">
         <div>
           <p className="text-[#003459]">What's New?</p>
-          <h2 className="text-xl font-bold text-start text-[#003459]">
+          <h2 className="md:text-xl text-sm font-bold text-start text-[#003459]">
             Take a Look at Some of Our Pets
           </h2>
         </div>

@@ -11,6 +11,8 @@ const buttonStyles = {
     "border border-blue-800 text-blue-800 hover:bg-[#003459] hover:text-white",
   outlinedLight:
     "border border-gray-300 text-white hover:bg-gray-200 hover:text-white",
+  outlinedLightwhite:
+    "border border-blue-800 text-blue-800 bg-[#FCEED5]  hover:bg-[#003459] hover:text-white",
 };
 
 const Button = ({

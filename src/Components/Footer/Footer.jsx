@@ -26,10 +26,10 @@ const Footer = () => {
       {/* Navigation Links */}
       <nav className="flex flex-col md:flex-row md:space-x-8 mb-5 justify-around items-center">
         <div className="flex space-x-6 mb-4 md:mb-0">
-          <a href="#" className="hover:underline">
+          <a href="/" className="hover:underline">
             Home
           </a>
-          <a href="#" className="hover:underline">
+          <a href="/category" className="hover:underline">
             Category
           </a>
           <a href="#" className="hover:underline">
@@ -40,16 +40,28 @@ const Footer = () => {
           </a>
         </div>
         <div className="flex space-x-6">
-          <a href="#" className="text-gray-700 hover:text-gray-900">
+          <a
+            href="https://facebook.com"
+            className="text-gray-700 hover:text-gray-900"
+          >
             <i className="fab fa-facebook-f"></i>
           </a>
-          <a href="#" className="text-gray-700 hover:text-gray-900">
+          <a
+            href="https://twitter.com"
+            className="text-gray-700 hover:text-gray-900"
+          >
             <i className="fab fa-twitter"></i>
           </a>
-          <a href="#" className="text-gray-700 hover:text-gray-900">
+          <a
+            href="https://instagram.com"
+            className="text-gray-700 hover:text-gray-900"
+          >
             <i className="fab fa-instagram"></i>
           </a>
-          <a href="#" className="text-gray-700 hover:text-gray-900">
+          <a
+            href="https://youtube.com"
+            className="text-gray-700 hover:text-gray-900"
+          >
             <i className="fab fa-youtube"></i>
           </a>
         </div>
@@ -60,7 +72,12 @@ const Footer = () => {
         <p className="text-sm text-gray-600">
           © 2022 Monito. All rights reserved.
         </p>
-        <img src={Logo} alt="Monito Logo" className="w-24" />
+        <img
+          src={Logo}
+          alt="Monito Logo"
+          onClick={() => (window.location.href = "/")}
+          className="w-24"
+        />
         <div className="flex space-x-6 text-sm">
           <a href="#" className="hover:underline">
             Terms of Service

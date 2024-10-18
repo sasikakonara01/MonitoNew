@@ -7,7 +7,7 @@ function Land() {
   return (
     <>
       <nav>
-        <div className="bg-[#FCEED5] min-h-[90vh] flex flex-col md:flex-row items-center justify-center relative">
+        <div className="bg-[#FCEED5] min-h-[90vh] flex flex-col md:flex-row items-center justify-center relative pt-10">
           {/* Left content section */}
           <div className="md:text-start p-8 max-w-lg z-1 md:ms-8 text-center">
             <h1 className="text-5xl font-bold text-[#003459] mb-2">

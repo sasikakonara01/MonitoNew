@@ -3,7 +3,7 @@ import { CircleFlag } from "react-circle-flags";
 
 // Define a list of all currencies with their respective flags.
 const currencies = [
-  { code: "USD", flag: <CircleFlag countryCode="us" height="20" /> },
+  { code: "VND", flag: <CircleFlag countryCode="vn" height="20" /> },
   { code: "EUR", flag: <CircleFlag countryCode="eu" height="20" /> },
   { code: "JPY", flag: <CircleFlag countryCode="jp" height="20" /> },
   { code: "GBP", flag: <CircleFlag countryCode="gb" height="20" /> },
@@ -13,6 +13,7 @@ const currencies = [
   { code: "CNY", flag: <CircleFlag countryCode="cn" height="20" /> },
   { code: "SEK", flag: <CircleFlag countryCode="se" height="20" /> },
   { code: "NZD", flag: <CircleFlag countryCode="nz" height="20" /> },
+  { code: "USD", flag: <CircleFlag countryCode="us" height="20" /> },
 ];
 
 export default function DropdownLinkButton() {
@@ -40,7 +41,7 @@ export default function DropdownLinkButton() {
         <div>
           <button
             onClick={toggleDropdown}
-            className="flex items-center bg-[#fceed5] text-[#003459] px-4 py-2 rounded focus:outline-none"
+            className="flex items-center bg-transparent text-[#003459] px-4 py-2 rounded focus:outline-none"
           >
             {/* Dropdown arrow icon only */}
             <svg
@@ -65,7 +66,7 @@ export default function DropdownLinkButton() {
               <button
                 key={currency.code}
                 onClick={() => handleItemClick(currency)}
-                className="flex items-center block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:outline-none"
+                className="flex items-center  w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:outline-none"
               >
                 {/* Use cloneElement to apply styles directly to the flag */}
                 {React.cloneElement(currency.flag, {

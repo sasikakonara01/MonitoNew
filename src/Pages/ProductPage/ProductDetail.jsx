@@ -9,7 +9,10 @@ import s5 from "../../Assets/Shibu/s5.png";
 import helth from "../../Assets/helth.png";
 import guarantee from "../../Assets/guarantee.png";
 import Button from "../../Components/Common/ReUsableButton/Button";
-import Footer from "../../Components/Footer/Footer";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
 
 const ProductDetail = () => {
   return (
@@ -127,7 +130,61 @@ const ProductDetail = () => {
           ))}
         </div>
       </div>
-
+      <h2 className="font-bold mt-8 text-xl text-[#003459] mb-4">
+        Our Lovely Customers
+      </h2>
+      <Swiper
+        spaceBetween={30}
+        slidesPerView={4} // Show 1 slide at a time
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <img
+            src={s1}
+            alt="Slide 1"
+            className="w-full  max-h-[200px] object-cover"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src={s2}
+            alt="Slide 2"
+            className="w-full  max-h-[200px] object-cover"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src={s3}
+            alt="Slide 3"
+            className="w-full  max-h-[200px] object-cover"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src={s1}
+            alt="Slide 1"
+            className="w-full  max-h-[200px] object-cover"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src={s2}
+            alt="Slide 2"
+            className="w-full  max-h-[200px] object-cover"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src={s3}
+            alt="Slide 3"
+            className="w-full max-h-[200px] object-cover"
+          />
+        </SwiperSlide>
+      </Swiper>
       {/* Pet Section */}
       <PetSectionLand />
     </div>
